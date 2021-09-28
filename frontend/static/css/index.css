@@ -1,6 +1,8 @@
 @font-face {
 	font-family: 'Blind';
-	src: url('/static/fonts/Blind Reg.ttf');
+	src: url('/static/fonts/blindl__-webfont.woff2') format('woff2'), url('/static/fonts/blindl__-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
