@@ -1,0 +1,330 @@
+@font-face {
+	font-family: 'Blind';
+	src: url('/static/fonts/Blind Reg.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+	--background-color: #272727;
+	--text-color: #f6f4e6;
+	--accent-color: #e63946;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100%;
+	background: var(--background-color);
+	background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%23e63946' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+	font-family: 'Blind', sans-serif;
+	animation: fadeInAnimation ease 3s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Home */
+
+.navMenu {
+	position: absolute;
+	top: 7%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.navMenu a {
+	color: var(--text-color);
+	text-decoration: none;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	display: inline;
+	width: 80px;
+	padding: 10px;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+	color: var(--accent-color);
+}
+
+.navMenu .dot {
+	width: 6px;
+	height: 6px;
+	background: var(--accent-color);
+	border-radius: 50%;
+	opacity: 0;
+	-webki-transform: translateX(30px);
+	transform: translateX(30px);
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:nth-child(1):hover ~ .dot {
+	-webkit-transform: translateX(32px);
+	transform: translateX(32px);
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover ~ .dot {
+	-webkit-transform: translateX(130px);
+	transform: translateX(130px);
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+	-webkit-transform: translateX(245px);
+	transform: translateX(245px);
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	opacity: 1;
+}
+
+h1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 150px;
+	color: var(--text-color);
+	font-size: 2.5em;
+}
+
+h2 {
+	color: var(--text-color);
+}
+
+.logo {
+	display: flex;
+	justify-content: center;
+	margin-top: 2em;
+}
+
+.logo img {
+	width: 200px;
+	transition: transform 0.7s ease-in-out;
+}
+
+.logo img:hover {
+	transform: rotate(360deg);
+}
+
+.info-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	margin-left: 30em;
+	margin-right: 30em;
+	text-align: center;
+	color: var(--text-color);
+	font-family: 'Poppins', sans-serif;
+	letter-spacing: 1px;
+	line-height: 20px;
+}
+
+.music-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+i {
+	font-size: 3em;
+	color: var(--accent-color);
+	margin-right: 1em;
+	transition: all 0.2s ease-in-out;
+}
+
+i:hover {
+	transform: scale(1.1);
+}
+
+svg {
+	width: 3em;
+	margin-left: 1em;
+	transition: all 0.2s ease-in-out;
+}
+
+svg path {
+	color: var(--accent-color);
+	fill: currentcolor;
+}
+
+svg:hover {
+	transform: scale(1.1);
+}
+
+/* Records */
+
+.records {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	margin-left: 30em;
+	margin-right: 30em;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-gap: 20px;
+	color: var(--text-color);
+	font-family: 'Poppins', sans-serif;
+}
+
+.records img {
+	border: 1px solid #ccc;
+	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+	max-width: 100%;
+	transition: all 0.2s ease-in-out;
+}
+
+.records img:hover {
+	transform: scale(1.1);
+}
+
+.record-name {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+/* Contact */
+
+.form-container {
+	position: relative;
+	left: 20%;
+	width: 60%;
+	height: 80vh;
+}
+
+.contact-form {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 80%;
+	height: 600px;
+}
+
+input,
+textarea {
+	width: 100%;
+	margin-top: 2rem;
+	border: none;
+	border-bottom: 1px solid var(--text-color);
+	background: transparent;
+	color: var(--text-color);
+	outline: none;
+}
+
+.submit {
+	border: 1px solid var(--text-color);
+	border-radius: 5px;
+	padding: 1rem;
+	text-align: center;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 1em;
+	background-color: #242424;
+	color: var(--text-color);
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 10px;
+}
+
+@media (max-width: 1700px) {
+	.records {
+		margin-left: 16em;
+		margin-right: 16em;
+	}
+}
+
+@media (max-width: 1500px) {
+	.info-container {
+		margin-left: 16em;
+		margin-right: 16em;
+	}
+}
+
+@media (max-width: 1000px) {
+	.info-container {
+		margin-left: 8em;
+		margin-right: 8em;
+	}
+	.records {
+		margin-left: 8em;
+		margin-right: 8em;
+	}
+}
+
+@media (max-width: 850px) {
+	.navMenu {
+		width: 300px;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	.logo img {
+		width: 150px;
+	}
+
+	.info-container {
+		margin-left: 4em;
+		margin-right: 4em;
+	}
+}
+
+@media (max-width: 550px) {
+	.info-container {
+		margin-left: 2em;
+		margin-right: 2em;
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 450px) {
+	h1 {
+		font-size: 1.5em;
+		margin-top: 100px;
+	}
+	.logo img {
+		width: 100px;
+	}
+	.records {
+		margin-left: 2em;
+		margin-right: 2em;
+	}
+
+	.form-container {
+		left: 10%;
+		width: 80%;
+	}
+}
